@@ -6,7 +6,7 @@ test("home, desktop navigation, search and filters", async ({ page }) => {
   page.on("pageerror", (error) => errors.push(error.message));
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "Everyday essentials.",
+    "Everything for your",
   );
   await page
     .getByRole("navigation", { name: "Main navigation", exact: true })

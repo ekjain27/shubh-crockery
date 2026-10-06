@@ -91,7 +91,7 @@ React Router uses browser history. A future static host **must rewrite non-file 
 
 ## Design & accessibility
 
-Forest green, warm neutral surfaces, original illustration and system/Georgia fonts. Responsive grids, filters, details and cart adapt from 320px upward. CSS tokens define colours, backgrounds, borders, spacing, radius, shadows, typography and container width. Media queries use documented thresholds of 360, 600, 800, 1100 and 1440px (CSS custom properties cannot be used directly in media-query conditions).
+Deep teal (#123B3A), restrained terracotta (#D96C3D), white cards and light neutral surfaces. System sans-serif typography prioritizes browsing; the original wordmark keeps its free Georgia serif treatment. WhatsApp green is reserved for relevant actions. Responsive grids, filters, details and cart adapt from 320px upward. CSS tokens define colours, backgrounds, borders, spacing, radius, shadows, typography and container width. Media queries use documented thresholds of 360, 600, 800 and 1100px (CSS custom properties cannot be used directly in media-query conditions).
 
 Semantic landmarks, labelled controls, radio variant selection, image alternatives, visible focus, skip link, quantity button names, cart status and reduced-motion handling are included. The mobile menu focuses its first link, cycles keyboard focus, closes on Escape/navigation, restores scrolling and returns focus on Escape. This is a foundation, not a complete assistive-technology audit. SEO includes language, descriptive title updates, a meta description and favicon; full SEO is planned for Prompt 7.
 

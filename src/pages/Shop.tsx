@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
+import { business } from "../config/business";
 import { products } from "../data/products";
 import { deriveGroups, filterProducts } from "../utils/products";
 import { ProductGrid } from "../components/product/ProductCard";
@@ -27,12 +28,12 @@ export function Shop() {
     commit(next);
   };
   return (
-    <div className="container page">
+    <div className="container page shop-page">
       <p className="eyebrow">THE DEMO COLLECTION</p>
-      <h1>Something for your everyday.</h1>
+      <h1>Shop {business.businessName}</h1>
       <p className="page-intro">
-        Browse crockery, serveware and home essentials. Ask us for prices on
-        WhatsApp.
+        Explore the demo collection of crockery and home essentials. Ask us for
+        current prices and availability on WhatsApp.
       </p>
       <div className="filters">
         <div className="field search-field">

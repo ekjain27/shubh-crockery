@@ -39,20 +39,20 @@ export function ProductCard({ product }: { product: Product }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Ask Price on WhatsApp →
+          Ask Price on WhatsApp
         </a>
         <div className="card-actions">
           <Link to={`/product/${product.slug}`}>View Product</Link>
           {selectable ? (
             <Link
-              className="button button-small button-outline"
+              className="button button-small"
               to={`/product/${product.slug}`}
             >
               Choose variant
             </Link>
           ) : (
             <button
-              className="button button-small button-outline"
+              className="button button-small"
               disabled={product.availability === "unavailable"}
               onClick={() => {
                 add({

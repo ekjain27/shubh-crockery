@@ -149,7 +149,7 @@ function Detail({ product }: { product: Product }) {
             )}
           </p>
           <a
-            className="button button-outline full-width"
+            className="button button-whatsapp full-width"
             aria-disabled={needsVariant}
             href={
               needsVariant

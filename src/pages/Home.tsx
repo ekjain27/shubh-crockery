@@ -5,6 +5,7 @@ import { deriveGroups } from "../utils/products";
 import { generalEnquiryUrl } from "../utils/whatsapp";
 import { ProductGrid } from "../components/product/ProductCard";
 import { Icon } from "../components/common/Icon";
+import { ProductImage } from "../components/product/ProductImage";
 const categoryImages: Record<string, string> = {
   "Bottles & flasks": "bottle",
   "Dining & crockery": "plates",
@@ -17,34 +18,35 @@ export function Home() {
       <section className="hero container">
         <div className="hero-copy">
           <p className="eyebrow">
-            <span className="small-rule" /> WELCOME TO{" "}
+            <span className="small-rule" />
             {business.businessName.toUpperCase()}
           </p>
           <h1>
-            Everyday essentials.
-            <br />
-            <em>A home to love.</em>
+            Everything for your
+            <br className="hero-break" />
+            <span> kitchen &amp; table.</span>
           </h1>
           <p>
-            From the first cup of tea to a table shared together, discover
-            crockery and homeware for your everyday.
+            Bottles, lunch boxes, dinner sets, crockery and everyday home
+            essentials. Explore our demo collection while verified products are
+            being prepared.
           </p>
           <div className="hero-buttons">
-            <Link className="button" to="/shop">
+            <Link className="button button-accent" to="/shop">
               Shop Products <Icon name="arrow" size={18} />
             </Link>
             <a
-              className="text-link"
+              className="button button-whatsapp"
               href={generalEnquiryUrl()}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Icon name="chat" /> WhatsApp enquiry
+              <Icon name="chat" /> Order on WhatsApp
             </a>
           </div>
           <div className="hero-note">
-            <span>Made for browsing.</span>
-            <span>One message away.</span>
+            <span>Browse the demo collection</span>
+            <span>Ask us for current prices</span>
           </div>
         </div>
         <div className="hero-image">
@@ -54,23 +56,12 @@ export function Home() {
             fetchPriority="high"
           />
           <div className="hero-label">
-            <span>THE EVERYDAY COLLECTION</span>
-            <strong>Little things. Lovely moments.</strong>
+            <span>EXPLORE SHUBH CROCKERY</span>
+            <strong>For your kitchen. For your table.</strong>
           </div>
           <span className="art-caption">Representative illustration</span>
         </div>
       </section>
-      <div className="value-strip container">
-        <span>
-          <Icon name="cup" /> Crockery & homeware
-        </span>
-        <span>
-          <Icon name="bag" /> Build your enquiry cart
-        </span>
-        <span>
-          <Icon name="chat" /> Ask prices on WhatsApp
-        </span>
-      </div>
       <section className="section container">
         <div className="section-heading">
           <div>
@@ -89,10 +80,17 @@ export function Home() {
               to={`/category/${group.slug}`}
             >
               <div className={`category-art art-${index}`}>
-                <img
-                  src={`/images/${categoryImages[group.name]}.svg`}
-                  alt=""
-                  loading="lazy"
+                <ProductImage
+                  image={
+                    categoryImages[group.name]
+                      ? {
+                          src: `/images/${categoryImages[group.name]}.svg`,
+                          alt: "",
+                          source: "local-demo",
+                          isRepresentative: true,
+                        }
+                      : undefined
+                  }
                 />
               </div>
               <div>
@@ -110,7 +108,7 @@ export function Home() {
           <div className="section-heading">
             <div>
               <p className="eyebrow">A FEW THINGS TO EXPLORE</p>
-              <h2>Everyday favourites</h2>
+              <h2>Featured products</h2>
             </div>
             <Link className="text-link" to="/shop">
               View all products <Icon name="arrow" size={18} />
@@ -148,10 +146,7 @@ export function Home() {
       <section className="how-section">
         <div className="container">
           <p className="eyebrow">SIMPLE, PERSONAL SHOPPING</p>
-          <h2>
-            A little browsing.
-            <br />A friendly conversation.
-          </h2>
+          <h2>How WhatsApp ordering works</h2>
           <div className="steps-grid">
             {[
               [
@@ -190,7 +185,7 @@ export function Home() {
             <p>Add it to your cart or simply ask us on WhatsApp.</p>
           </div>
           <a
-            className="button"
+            className="button button-whatsapp"
             href={generalEnquiryUrl()}
             target="_blank"
             rel="noopener noreferrer"

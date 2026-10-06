@@ -36,7 +36,9 @@ export function Cart() {
           <div>
             <div className="cart-list-heading">
               <span>
-                {count} {count === 1 ? "item" : "items"}
+                {items.length}{" "}
+                {items.length === 1 ? "product line" : "product lines"} · Total
+                quantity: {count}
               </span>
               <button className="text-button" onClick={clear}>
                 Clear cart
@@ -92,7 +94,7 @@ export function Cart() {
           </div>
           <aside className="enquiry-summary">
             <p className="eyebrow">THE NEXT STEP</p>
-            <h2>Let’s start a conversation.</h2>
+            <h2>Enquire on WhatsApp</h2>
             <p>
               Your list contains{" "}
               <strong>
@@ -101,7 +103,7 @@ export function Cart() {
               . The shop will confirm prices and availability on WhatsApp.
             </p>
             <a
-              className="button full-width"
+              className="button button-whatsapp full-width"
               href={whatsappUrl(cartMessage(items))}
               target="_blank"
               rel="noopener noreferrer"

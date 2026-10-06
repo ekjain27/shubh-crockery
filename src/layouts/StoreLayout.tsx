@@ -28,7 +28,8 @@ export function StoreLayout() {
       <div className="demo-notice">
         DEVELOPMENT PREVIEW{" "}
         <span>
-          Sample products & illustrative artwork. Real catalogue coming next.
+          Sample products & illustrative artwork. Real catalogue products coming
+          next.
         </span>
       </div>
       <main id="main" tabIndex={-1}>

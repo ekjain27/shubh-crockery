@@ -59,7 +59,7 @@ export function Contact() {
         <p>WhatsApp is our confirmed contact channel.</p>
         <p className="contact-number">{business.whatsappDisplay}</p>
         <a
-          className="button"
+          className="button button-whatsapp"
           href={generalEnquiryUrl()}
           target="_blank"
           rel="noopener noreferrer"
